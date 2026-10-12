@@ -111,7 +111,7 @@ namespace routApiTest
                             string usrName = msg.Split(':')[0];
                             string messageText = msg.Remove(0, usrName.Length + 1);
 
-                            appendToChat($"{usrName}: \"{messageText}\"");
+                            appendToChat($"\"{messageText}\"");
                         }
                         catch(Exception ex)
                         {
@@ -219,6 +219,23 @@ namespace routApiTest
         private void textBoxSenderName_TextChanged(object sender, EventArgs e)
         {
             targetDeviceName = textBoxSenderName.Text;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string json = JsonConvert.SerializeObject(new
+            {
+                type = "SESSION_START",
+                from = targetDeviceName,
+                to = "",
+                mode = "SSH_S",
+                accessKey = txtAccessKey.Text,
+                payload = richTextBox2.Text
+            });
+
+            richTextBox2.Clear();
+            protocol.Send(json);
+            appendLog($"Sent SESSION_START with SSH mode('{json}')");
         }
     }
 }

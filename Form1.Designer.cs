@@ -46,6 +46,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -90,9 +91,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(88, 302);
+            this.button2.Location = new System.Drawing.Point(18, 302);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 23);
+            this.button2.Size = new System.Drawing.Size(149, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "Отправить";
             this.button2.UseVisualStyleBackColor = true;
@@ -192,11 +193,22 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Данные(приём): ";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(173, 302);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(122, 40);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Отправить в режиме SSH";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 449);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.button3);
@@ -240,6 +252,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button4;
     }
 }
 
